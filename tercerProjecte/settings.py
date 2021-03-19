@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'estaciOmediambiental',
-    'rest_framework',
     'pwa',
 ]
 
@@ -78,21 +77,10 @@ WSGI_APPLICATION = 'tercerProjecte.wsgi.application'
 
 DATABASES = {
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': 'postgres',
-
-        'USER': 'postgres',
-
-        'PASSWORD': 'Nico1357',
-
-        'HOST': 'estaciomedioambiental.cs41wky20mds.us-east-1.rds.amazonaws.com',
-
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -138,8 +126,9 @@ STATIC_URL = '/static/'
 
 PWA_APP_NAME = "Estació Meteorologica"
 PWA_APP_DESCRIPTION = "Estació Meteorologica Cirvianum"
-PWA_APP_THEME_COLOR = "#aef2ea"
-PWA_APP_BACKGROUND_COLOR = "#aef2ea"
+PWA_APP_THEME_COLOR = "#141418"
+PWA_APP_BACKGROUND_COLOR = "#141418"
+PWA_APP_START_URL = '/dades'
 PWA_APP_ICONS = [
     {
         "src": "/static/img/icon.png",

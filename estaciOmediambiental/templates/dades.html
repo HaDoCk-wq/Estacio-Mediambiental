@@ -1,13 +1,47 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}test{% endblock %}
+{% block title %}Dades{% endblock %}
 
 {% block content %}
 
-<body>
-    <nav class="navbar topbar navbar-expand-sm navbar-dark">
 
+<body>
+    <nav class="navbar topbar shadow fixed-top navbar-expand-sm navbar-dark p-3">
+        <div class="icon d-inline-block" style="color: white;">
+            ico
+        </div>
+        <div class="cerca mx-auto d-inline-block container">
+            <div class="container" style="padding-left: 110px; padding-right: 110px">
+                <div class="input-group">
+                    <input type="email" class="form-control border btn-dark"
+                        style="background-color: #373749 !important; border: solid 1px black !important;"
+                        id="floatingInput" placeholder="Cerca">
+                    <button class="btn btn-dark" style="border: solid 1px black !important;" type="button"
+                        id="button-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="notificacions d-inline-block m-2" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bell"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+            </svg>
+        </div>
+        <div class="user d-inline-block m-2" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+            </svg>
+        </div>
     </nav>
 
     <nav class="snavbar p-0">
@@ -145,11 +179,199 @@
     </nav>
 
     <main>
-        test
+        <div class="container">
+            <p class="bd-title fw-bolder">Ds</p>
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dades</li>
+                </ol>
+            </nav>
+            <hr>
+            <br>
+            <br>
+
+            <button type="button" onclick="agafaDades()" class="btn btn-light">Carrega</button>
+
+            <div id="test"></div>
+
+            <canvas id="myChart"></canvas>
+
+            <br><br><br><br>
+
+            <br>
+
+            <div class="row" data-masonry="{&quot;percentPosition&quot;: true }"
+                style="position: relative; height: 690px;">
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Image cap</text>
+                        </svg>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Card title that wraps to a new line</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to
+                                additional
+                                content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
+                    <div class="card p-3">
+                        <figure class="p-3 mb-0">
+                            <blockquote class="blockquote">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                Someone famous in <cite title="Source Title">Source Title</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Image cap</text>
+                        </svg>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <figure class="mb-0">
+                            <blockquote class="blockquote">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-white">
+                                Someone famous in <cite title="Source Title">Source Title</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 310px;">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 362px;">
+                    <div class="card">
+                        <img class="rounded" src="{% static 'img/jvector.PNG' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 378px;">
+                    <div class="card p-3 text-end">
+                        <figure class="mb-0">
+                            <blockquote class="blockquote">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0 text-muted">
+                                Someone famous in <cite title="Source Title">Source Title</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 488px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is another card with title and supporting text below. This card
+
+                                has
+                                some
+                                additional content to make it slightly taller overall.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </main>
 
     {% endblock %}
 
     {% block scripts %}
-    <script src="{% static 'scripts/js/test.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+        integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+        crossorigin="anonymous"></script>
+
+    <script src="{% static 'scripts/js/ajax.js' %}"></script>
+    <script src="{% static 'scripts/js/dash.js' %}"></script>
+    <script>
+
+        //_id("test")._load("http://localhost:8000/test");
+
+
+
+        agafaDades();
+        async function agafaDades() {
+            http.call({
+                method: "get",
+                url: "http://localhost:8888/api/Registre/",
+                //url: "http://www.google.com",
+                object: true,
+                headers: [
+                    {
+                        header: "X-CSRFToken",
+                        value: csrftoken
+                    },
+                ],
+                error: function (response) {
+                    console.log(response);
+                },
+                success: function (response) {
+                    var valors = [];
+                    response.forEach(registre => {
+                        valors.push(registre.valor)
+                    });
+                    _id("myChart").innerHTML = "";
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var chart = new Chart(ctx, {
+                        // The type of chart we want to create
+                        type: 'line',
+
+                        // The data for our dataset
+                        data: {
+                            labels: valors,
+                            datasets: [{
+                                label: 'Dades de exemple',
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: valors
+                            }]
+                        },
+
+                        // Configuration options go here
+                        options: {}
+                    });
+                }
+            });
+
+        }
+
+    </script>
+
     {% endblock %}

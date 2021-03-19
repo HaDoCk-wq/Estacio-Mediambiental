@@ -18,26 +18,13 @@ from django.urls import path, include
 from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
 
-######## API #########
-from estaciOmediambiental.views import ClientViewSet, SensorViewSet, RegistreViewSet
-
 ######## Views #########
 from estaciOmediambiental.views import test, xhr, dades
-
-
-router = routers.DefaultRouter()
-router.register('Clients', ClientViewSet)
-router.register('Sensors', SensorViewSet)
-router.register('Registre', RegistreViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pwa.urls')),
-
-    ###### API ######
-    path('docs/', include_docs_urls(title='Django', public=False)),
-    path('api/', include(router.urls)),
 
     ##### Views ######
     path('test', test.as_view()),

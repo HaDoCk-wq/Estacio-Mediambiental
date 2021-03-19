@@ -18,20 +18,21 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.25rem;
+  width: 0.35rem;
 }
 
 body::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: #19191f;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #6666ff;
 }
 
 main {
   margin-left: 5rem;
   padding: 1rem;
+  margin-top: var(--topbar-heidth) !important;
 }
 
 .topbar {
@@ -43,6 +44,7 @@ main {
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 600ms ease;
+  z-index: 100;
 }
 
 .snavbar-nav {
@@ -91,11 +93,11 @@ main {
 }
 
 .fa-primary {
-  color: #71c7ec;
+  color: #9999ff;
 }
 
 .fa-secondary {
-  color: #0059b3;
+  color: #6666ff;
 }
 
 .fa-primary,
@@ -165,7 +167,7 @@ main {
   }
 
   .snavbar:hover {
-    width: 232px;
+    width: 16rem;
   }
 
   .snavbar:hover .link-text {
@@ -219,4 +221,8 @@ main {
 
 .solar #solarIcon {
   display: block;
+}
+
+.bd-title {
+  font-size: 3rem;
 }

@@ -19,7 +19,7 @@ from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
 
 ######## Views #########
-from estaciOmediambiental.views import test, xhr, dades
+from estaciOmediambiental.views import test, xhr, dades, yourDisplays, world_map, config, addDisplay, display, logIn, signIn
 
 
 urlpatterns = [
@@ -27,7 +27,17 @@ urlpatterns = [
     path('', include('pwa.urls')),
 
     ##### Views ######
+    path('', dades.as_view()),
+
     path('test', test.as_view()),
     path('xhr', xhr.as_view()),
-    path('dades', dades.as_view())
+    path('dades', dades.as_view()),
+    path('yourDisplays', yourDisplays.as_view()),
+    path('world_map', world_map.as_view()),
+    path('config', config.as_view()),
+    path('addDisplay', addDisplay.as_view()),
+    path('display', display.as_view()),
+    path('logIn', logIn.as_view()),
+    path('signIn', signIn.as_view())
+
 ]

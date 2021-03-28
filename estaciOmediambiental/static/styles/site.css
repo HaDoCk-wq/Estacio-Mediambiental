@@ -226,3 +226,63 @@ main {
 .bd-title {
   font-size: 3rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.mainRasp {
+  width: 300px;
+  margin: 10px; 
+  border: 1px solid white; 
+  padding: 10px;
+  border-radius: 7px;
+
+  background-image: linear-gradient(var(--bg-primary), var(--bg-top));
+ /*  background-color: var(--bg-primary); */
+  color: var(--text-secondary);
+  flex-grow: 1;
+
+  transition: all var(--transition-speed);
+}
+.mainRasp:hover {
+  transform: scale(1.1);
+}
+
+.linkdiv {
+  color: var(--text-secondary);
+  transition: all var(--transition-speed);
+  text-decoration: none;
+}
+.linkdiv:hover {
+  color: var(--text-primary);
+}
+
+.onnoffbutton {
+  color: var(--text-secondary);
+  transition: all var(--transition-speed);
+  text-decoration: none;
+}
+.onnoffbutton:hover {
+  color: var(--text-primary);
+  transform: scale(1.3);
+}
+.mainRaspINV {
+  width: 300px;
+  margin: 10px; 
+  flex-grow: 1;
+}
+
+.btn {
+  transition: all var(--transition-speed);
+}
+.btn:hover {
+  transform: scale(1.05);
+}

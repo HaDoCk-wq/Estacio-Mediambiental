@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Displays{% endblock %}
+
+{% block content %}
+
+
+
+
+    <main>
+        <div class="container" style="max-width: 800px">
+            <p class="bd-title fw-bolder" style="margin-top: 10vh">New display:</p>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Display name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the display name">
+                </div><br>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Sensors:</label>
+                    <div style="margin-bottom: 5px">
+                        <div style="display: flex; justify-content: space-between">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select a sensor type...</option>
+                                <option value="1">Air sensor</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div style="padding: 5px; padding-left: 10px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-dark">
+                    <svg style="margin-right: 5px; margin-top: -3px" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    Add Sensor</button>
+                </div><br>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Display location</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the display location">
+                </div><br>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">¿Display in quarantine?</label>
+                </div><br>
+                <button type="submit" class="btn btn-dark">
+                    <svg style="margin-right: 5px; margin-top: -3px" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                Save</button>
+            </form>
+        </div>
+    </main>
+
+    {% endblock %}
+
+    {% block scripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+        integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+        crossorigin="anonymous"></script>
+
+    <script src="{% static 'scripts/js/ajax.js' %}"></script>
+    <script src="{% static 'scripts/js/dash.js' %}"></script>
+
+    {% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Displays{% endblock %}
+
+{% block content %}
+
+
+
+
+    <main>
+        <div class="container">
+
+            <form method="post" action="" style="max-width: 600px; margin: auto">
+                {% csrf_token %}
+
+                <h1 style="margin-top: 200px" align="center"> Log In </h1><br>
+                <div class="form-group">
+                    <h4 for="exampleFormControlInput1">Email or Username</h4>
+                    <input type="text" class="form-control" name="usernameLog" id="usernameLog">
+                </div><br>
+
+                <div class="form-group">
+                    <h4 for="exampleFormControlInput1">Password</h4>
+                    <input type="password" class="form-control" name="passLog" id="passLog">
+                </div>
+
+                <br>
+                <div style="display: flex; justify-content: space-between">
+                    <a href="/signIn" class="btn btn-dark">
+                    <svg style="margin-right: 5px; margin-top: -3px" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    Create an account</a>
+                    <button type="submit" class="btn btn-dark">Continue
+                        <svg style="margin-left: 5px; margin-top: -3px" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
+                    </button>
+                </div>
+                <br><br><br><br><br>
+            </form>
+
+        </div>
+    </main>
+
+    {% endblock %}
+
+    {% block scripts %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"
+        integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA=="
+        crossorigin="anonymous"></script>
+
+    <script src="{% static 'scripts/js/ajax.js' %}"></script>
+    <script src="{% static 'scripts/js/dash.js' %}"></script>
+
+    {% endblock %}
